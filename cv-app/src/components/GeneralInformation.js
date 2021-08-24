@@ -1,6 +1,6 @@
 import React,{ useState } from "react";
 
-const GeneralInformation = () => {
+const GeneralInformation = (props) => {
     const [enteredFirstName, setEnteredFirstName] = useState('');
     const [enteredLastName, setEnteredLastName] = useState('');
     const [enteredEmail, setEnteredEmail] = useState('');
@@ -21,6 +21,15 @@ const GeneralInformation = () => {
     const setPhoneNumberHandler = (event) => {
         setEnteredPhoneNum(event.target.value);
     };
+
+    const generalInformationData = {
+        fName: enteredFirstName,
+        lName: enteredLastName,
+        email: enteredEmail,
+        pNumber: enteredPhoneNum
+    };
+
+    props.savedGeneralInfo(generalInformationData);
 
     return (
         <div>

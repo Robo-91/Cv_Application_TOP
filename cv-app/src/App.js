@@ -6,10 +6,16 @@ import Experience from './components/Experience';
 import CvItemsList from './components/CvItemsList';
 
 const App = () => {
+  let CvInfo = [];
+
+  const savedGeneralInfoHandler = (enteredGiData) => {
+    CvInfo = [{...enteredGiData}];
+  }
+
   return (
     <div className="App">
       <Navbar />
-      <GeneralInformation />
+      <GeneralInformation savedGeneralInfo={savedGeneralInfoHandler} />
       <Education />
       <Experience />
       <CvItemsList />

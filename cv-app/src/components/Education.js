@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Education = () => {
+const Education = (props) => {
     const [enteredSchoolName,setEnteredSchoolName] = useState('');
     const [enteredStudy,setEnteredStudy] = useState('');
     const [enteredGradDate,setEnteredGradDate] = useState('');
@@ -19,6 +19,14 @@ const Education = () => {
         setEnteredGradDate(event.target.value);
         console.log(enteredGradDate)
     };
+
+    const educationData = {
+        schoolName: enteredSchoolName,
+        study: enteredStudy,
+        gradDate: enteredGradDate
+    };
+    
+    props.savedEducationInfo(educationData);
  
     return (
         <div>

@@ -9,14 +9,19 @@ const App = () => {
   let CvInfo = [];
 
   const savedGeneralInfoHandler = (enteredGiData) => {
-    CvInfo = [{...enteredGiData}];
-  }
+    CvInfo[0] = {...enteredGiData};
+  };
+
+  const savedEducationHandler = (enteredEdData) => {
+    CvInfo[1] = {...enteredEdData};
+    console.log(CvInfo);
+  };
 
   return (
     <div className="App">
       <Navbar />
       <GeneralInformation savedGeneralInfo={savedGeneralInfoHandler} />
-      <Education />
+      <Education savedEducationInfo={savedEducationHandler} />
       <Experience />
       <CvItemsList />
     </div>

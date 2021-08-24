@@ -1,6 +1,8 @@
 const CvItemsList = () => {
     return (
-            <li>List Section</li>
+            <ul>
+                <li>List Section</li>
+            </ul>
     );
 };
 

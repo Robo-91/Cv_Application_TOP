@@ -14,7 +14,10 @@ const App = () => {
 
   const savedEducationHandler = (enteredEdData) => {
     CvInfo[1] = {...enteredEdData};
-    console.log(CvInfo);
+  };
+
+  const savedExperienceHandler = (enteredExData) => {
+    CvInfo[2] = {...enteredExData};
   };
 
   return (
@@ -22,7 +25,7 @@ const App = () => {
       <Navbar />
       <GeneralInformation savedGeneralInfo={savedGeneralInfoHandler} />
       <Education savedEducationInfo={savedEducationHandler} />
-      <Experience />
+      <Experience savedExperienceInfo={savedExperienceHandler} />
       <CvItemsList />
     </div>
   );

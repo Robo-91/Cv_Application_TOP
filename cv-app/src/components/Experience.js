@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Experience = () => {
+const Experience = (props) => {
     const [enteredCompanyName,setEnteredCompanyName] = useState('');
     const [enteredPosition,setEnteredPosition] = useState('');
     const [enteredStartDate,setEnteredStartDate] = useState('');
@@ -28,6 +28,15 @@ const Experience = () => {
         setEnteredEndDate(event.target.value);
         console.log(enteredEndDate);
     };
+
+    const experienceData = {
+        companyName: enteredCompanyName,
+        title: enteredPosition,
+        startDate: enteredStartDate,
+        endDate: enteredEndDate
+    };
+
+    props.savedExperienceInfo(experienceData);
 
     return (
         <div>

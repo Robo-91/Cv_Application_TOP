@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import GeneralInformation from './components/GeneralInformation';
@@ -7,6 +8,7 @@ import CvItemsList from './components/CvItemsList';
 
 const App = () => {
   let CvInfo = [];
+  const [submitCvInfo, setSubmitCvInfo] = useState(false);
 
   const savedGeneralInfoHandler = (enteredGiData) => {
     CvInfo[0] = {...enteredGiData};
@@ -20,13 +22,23 @@ const App = () => {
     CvInfo[2] = {...enteredExData};
   };
 
+  const submitHandler = () => {
+    if(CvInfo[0].fName === ""){
+      alert("Please fill out the entire form before submitting");
+      return null;
+    } else {
+      setSubmitCvInfo(true);
+    }
+  };
+
   return (
     <div className="App">
       <Navbar />
       <GeneralInformation savedGeneralInfo={savedGeneralInfoHandler} />
       <Education savedEducationInfo={savedEducationHandler} />
       <Experience savedExperienceInfo={savedExperienceHandler} />
-      <CvItemsList />
+      <button onClick={submitHandler}>Submit</button>
+      {submitCvInfo && <CvItemsList CvData={CvInfo} isSubmitted={submitCvInfo} />}
     </div>
   );
 }

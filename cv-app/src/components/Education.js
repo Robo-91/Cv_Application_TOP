@@ -7,17 +7,14 @@ const Education = (props) => {
 
     const setSchoolNameHandler = (event) => {
         setEnteredSchoolName(event.target.value);
-        console.log(enteredSchoolName)
     };
 
     const setStudyHandler = (event) => {
         setEnteredStudy(event.target.value);
-        console.log(enteredStudy)
     };
 
     const setGradDateHandler = (event) => {
         setEnteredGradDate(event.target.value);
-        console.log(enteredGradDate)
     };
 
     const educationData = {

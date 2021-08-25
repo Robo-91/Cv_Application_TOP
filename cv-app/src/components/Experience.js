@@ -8,25 +8,21 @@ const Experience = (props) => {
 
     const setCompanyNameHandler = (event) => {
         setEnteredCompanyName(event.target.value);
-        console.log(enteredCompanyName);
     };
 
 
     const setPositionHandler = (event) => {
         setEnteredPosition(event.target.value);
-        console.log(enteredPosition);
     };
 
 
     const setStartDateHandler = (event) => {
         setEnteredStartDate(event.target.value);
-        console.log(enteredStartDate);
     };
 
 
     const setEndDateHandler = (event) => {
         setEnteredEndDate(event.target.value);
-        console.log(enteredEndDate);
     };
 
     const experienceData = {

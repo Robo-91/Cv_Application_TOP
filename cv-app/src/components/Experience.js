@@ -35,15 +35,26 @@ const Experience = (props) => {
     props.savedExperienceInfo(experienceData);
 
     return (
-        <div>
-            <label htmlFor="company-name">Company Name:</label>
-            <input id="company-name" type="text" value={enteredCompanyName} onChange={setCompanyNameHandler} />
-            <label htmlFor="position-title">Position Title</label>
-            <input id="position-title" type="text" value={enteredPosition} onChange={setPositionHandler} />
-            <label htmlFor="start-date">Date Started</label>
-            <input id="start-date" type="date" value={enteredStartDate} onChange={setStartDateHandler} />
-            <label htmlFor="end-date">Date End</label>
-            <input id="end-date" type="date" value={enteredEndDate} onChange={setEndDateHandler} />
+        <div className="container">
+            <div className="row">
+                <h4>Experience</h4>
+                <div className="input-field col s12">
+                    <label className="active" htmlFor="company-name">Company Name:</label>
+                    <input id="company-name" type="text" value={enteredCompanyName} onChange={setCompanyNameHandler} />
+                </div>
+                <div className="input-field col s12">
+                    <label className="active" htmlFor="position-title">Position Title</label>
+                    <input id="position-title" type="text" value={enteredPosition} onChange={setPositionHandler} />
+                </div>
+                <div className="input-field col s6">
+                    <label className="active" htmlFor="start-date">Date Started</label>
+                    <input id="start-date" type="date" value={enteredStartDate} onChange={setStartDateHandler} />
+                </div>
+                <div className="input-field col s6">
+                    <label className="active" htmlFor="end-date">Date End</label>
+                    <input id="end-date" type="date" value={enteredEndDate} onChange={setEndDateHandler} />
+                </div>
+            </div>
         </div>
     );
 };

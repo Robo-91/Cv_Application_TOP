@@ -33,11 +33,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar className="nav-wrapper" />
       <GeneralInformation savedGeneralInfo={savedGeneralInfoHandler} />
       <Education savedEducationInfo={savedEducationHandler} />
       <Experience savedExperienceInfo={savedExperienceHandler} />
-      <button onClick={submitHandler}>Submit</button>
+      <button className="waves-effect waves-light btn-large" onClick={submitHandler}>Submit</button>
       {submitCvInfo && <CvItemsList CvData={CvInfo} isSubmitted={submitCvInfo} />}
     </div>
   );

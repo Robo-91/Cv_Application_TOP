@@ -32,15 +32,28 @@ const GeneralInformation = (props) => {
     props.savedGeneralInfo(generalInformationData);
 
     return (
-        <div>
-            <label htmlFor="fname">First Name:</label>
-            <input id="fname" type="text" value={enteredFirstName} onChange={setFirstNameHandler} />
-            <label htmlFor="lname">Last Name:</label>
-            <input id="lname" type="text" value={enteredLastName} onChange={setLastNameHandler} />
-            <label htmlFor="email">Email:</label>
-            <input id="email" type="email" value={enteredEmail} onChange={setEmailHandler} />
-            <label htmlFor="phonenumber">Telephone Number:</label>
-            <input id="phonenumber" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={enteredPhoneNum} onChange={setPhoneNumberHandler} />
+        <div className="container">
+            <div className="section">
+                <div className="row">
+                    <h4>General Information</h4>
+                    <div className="input-field col s6">
+                        <label className="active" htmlFor="fname">First Name:</label>
+                        <input id="fname" type="text" value={enteredFirstName} onChange={setFirstNameHandler} />
+                    </div>
+                    <div className="input-field col s6">
+                        <label className="active" htmlFor="lname">Last Name:</label>
+                        <input id="lname" type="text" value={enteredLastName} onChange={setLastNameHandler} />
+                    </div>
+                    <div className="input-field col s12">
+                        <label className="active" htmlFor="email">Email:</label>
+                        <input id="email" type="email" value={enteredEmail} onChange={setEmailHandler} />
+                    </div>
+                    <div className="input-field col s12">
+                        <label className="active" htmlFor="phonenumber">Telephone Number:</label>
+                        <input id="phonenumber" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={enteredPhoneNum} onChange={setPhoneNumberHandler} />
+                    </div>
+                </div>
+            </div>
         </div>
     ); 
 };

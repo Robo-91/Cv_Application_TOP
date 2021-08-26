@@ -1,6 +1,10 @@
 const Navbar = () => {
     return (
-        <nav>Cv Application</nav>
+        <div className="navbar-fixed">
+            <nav>
+                <a className="brand-logo center" href="#">CV Application</a>
+            </nav>
+        </div>
     );
 };
 

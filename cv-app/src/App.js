@@ -37,7 +37,7 @@ const App = () => {
       <GeneralInformation savedGeneralInfo={savedGeneralInfoHandler} />
       <Education savedEducationInfo={savedEducationHandler} />
       <Experience savedExperienceInfo={savedExperienceHandler} />
-      <button className="waves-effect waves-light btn-large" onClick={submitHandler}>Submit</button>
+      <button className="submitbtn waves-effect waves-light btn-large" onClick={submitHandler}>Submit</button>
       {submitCvInfo && <CvItemsList CvData={CvInfo} isSubmitted={submitCvInfo} />}
     </div>
   );
